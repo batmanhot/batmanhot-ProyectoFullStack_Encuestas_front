@@ -1,0 +1,108 @@
+@import "tailwindcss";
+
+@layer base {
+  :root {
+    --color-peru-red: #D32F2F;
+    --color-peru-blue: #1565C0;
+    --color-peru-white: #FFFFFF;
+    --color-peru-gray: #F5F5F5;
+    --color-dark-bg: #1E1E2F;
+    --color-dark-card: #2A2A3D;
+    --color-dark-text: #E0E0E0;
+    --color-success: #2E7D32;
+    --color-warning: #ED6C02;
+    --color-error: #C62828;
+  }
+
+  body {
+    background-color: #FFFFFF;
+    color: #111827;
+    transition: background-color 0.2s, color 0.2s;
+    font-family: 'Inter', system-ui, sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body.dark-mode,
+  html.dark {
+    background-color: #1E1E2F;
+    color: #E0E0E0;
+  }
+
+  h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+  }
+
+  a {
+    color: #1565C0;
+    transition: color 0.2s ease-in-out;
+  }
+
+  a:hover {
+    color: #1d4ed8;
+  }
+
+  html.dark a {
+    color: #60a5fa;
+  }
+
+  html.dark a:hover {
+    color: #93c5fd;
+  }
+}
+
+/* Animaciones personalizadas */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+  width: 0.5rem;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1E1E2F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1565C0;
+  border-radius: 0.25rem;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  background: #2A2A3D;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #1d4ed8;
+}

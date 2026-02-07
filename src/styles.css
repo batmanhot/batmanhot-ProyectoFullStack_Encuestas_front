@@ -1,0 +1,217 @@
+/* Colores personalizados - Estilos de fallback */
+:root {
+  --color-peru-red: #D32F2F;
+  --color-peru-blue: #1565C0;
+  --color-peru-white: #FFFFFF;
+  --color-peru-gray: #F5F5F5;
+  --color-dark-bg: #1E1E2F;
+  --color-dark-card: #2A2A3D;
+  --color-dark-text: #E0E0E0;
+  --color-success: #2E7D32;
+  --color-warning: #ED6C02;
+  --color-error: #C62828;
+}
+
+/* Clases de utilidad de colores */
+.bg-peruRed {
+  background-color: #D32F2F;
+}
+
+.bg-peruBlue {
+  background-color: #1565C0;
+}
+
+.bg-peruWhite {
+  background-color: #FFFFFF;
+}
+
+.bg-peruGray {
+  background-color: #F5F5F5;
+}
+
+.bg-darkBg {
+  background-color: #1E1E2F;
+}
+
+.bg-darkCard {
+  background-color: #2A2A3D;
+}
+
+.text-peruRed {
+  color: #D32F2F;
+}
+
+.text-peruBlue {
+  color: #1565C0;
+}
+
+.text-peruWhite {
+  color: #FFFFFF;
+}
+
+.text-darkText {
+  color: #E0E0E0;
+}
+
+.text-success {
+  color: #2E7D32;
+}
+
+.text-warning {
+  color: #ED6C02;
+}
+
+.text-error {
+  color: #C62828;
+}
+
+.bg-success {
+  background-color: #2E7D32;
+}
+
+.bg-warning {
+  background-color: #ED6C02;
+}
+
+.bg-error {
+  background-color: #C62828;
+}
+
+/* Bordes */
+.border-peruBlue {
+  border-color: #1565C0;
+}
+
+.border-peruRed {
+  border-color: #D32F2F;
+}
+
+/* Hover states */
+.hover\:bg-blue-700:hover {
+  background-color: #1d4ed8;
+}
+
+.hover\:bg-red-700:hover {
+  background-color: #b91c1c;
+}
+
+.hover\:bg-peruBlue:hover {
+  background-color: #0d47a1;
+}
+
+/* Shadow personalizado */
+.shadow-soft {
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+}
+
+.shadow-strong {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+.hover\:shadow-strong:hover {
+  box-shadow: 0 4px 12px rgba(0,0,0,0.2);
+}
+
+/* Transiciones */
+.transition-all {
+  transition: all 0.2s ease-in-out;
+}
+
+.transition-colors {
+  transition: background-color 0.2s, border-color 0.2s, color 0.2s;
+}
+
+.duration-200 {
+  transition-duration: 0.2s;
+}
+
+/* Border radius */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-full {
+  border-radius: 9999px;
+}
+
+/* Padding y Margins */
+.p-4 {
+  padding: 1rem;
+}
+
+.p-6 {
+  padding: 1.5rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mb-2 {
+  margin-bottom: 0.5rem;
+}
+
+.gap-2 {
+  gap: 0.5rem;
+}
+
+.gap-4 {
+  gap: 1rem;
+}
+
+.space-y-4 > * + * {
+  margin-top: 1rem;
+}
+
+.space-y-6 > * + * {
+  margin-top: 1.5rem;
+}
+
+/* Flexbox */
+.flex {
+  display: flex;
+}
+
+.flex-col {
+  flex-direction: column;
+}
+
+.items-center {
+  align-items: center;
+}
+
+.justify-center {
+  justify-content: center;
+}
+
+/* Grid */
+.grid {
+  display: grid;
+}
+
+.grid-cols-1 {
+  grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+@media (min-width: 768px) {
+  .md\:grid-cols-4 {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+  }
+}
+
+/* Dark mode support */
+html.dark .bg-peruGray {
+  background-color: #2A2A3D;
+}
+
+html.dark .text-gray-600 {
+  color: #9ca3af;
+}
+
+html.dark .text-gray-700 {
+  color: #d1d5db;
+}
+
+html.dark .border-gray-200 {
+  border-color: #374151;
+}

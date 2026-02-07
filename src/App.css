@@ -1,0 +1,225 @@
+/* Estilos base para la aplicación */
+#root {
+  min-height: 100vh;
+  background-color: #FFFFFF;
+  color: #111827;
+  transition: background-color 0.2s, color 0.2s;
+}
+
+html.dark #root {
+  background-color: #1E1E2F;
+  color: #E0E0E0;
+}
+
+/* Tipografía mejorada */
+body {
+  font-family: 'Inter', system-ui, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+}
+
+/* Links con mejor estilo */
+a {
+  color: #1565C0;
+  transition: color 0.2s ease-in-out;
+}
+
+a:hover {
+  color: #1d4ed8;
+}
+
+html.dark a {
+  color: #60a5fa;
+}
+
+html.dark a:hover {
+  color: #93c5fd;
+}
+
+/* Animaciones personalizadas */
+@keyframes slideIn {
+  from {
+    opacity: 0;
+    transform: translateY(10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-slide-in {
+  animation: slideIn 0.3s ease-out;
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s ease-out;
+}
+
+.animate-slide-in-left {
+  animation: slideInLeft 0.4s ease-out;
+}
+
+/* Scroll personalizado */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #F5F5F5;
+  border-radius: 10px;
+}
+
+html.dark ::-webkit-scrollbar-track {
+  background: #1E1E2F;
+}
+
+::-webkit-scrollbar-thumb {
+  background: linear-gradient(180deg, #1565C0, #0d47a1);
+  border-radius: 10px;
+  border: 2px solid #F5F5F5;
+}
+
+html.dark ::-webkit-scrollbar-thumb {
+  border-color: #1E1E2F;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: linear-gradient(180deg, #1d4ed8, #1565C0);
+}
+
+/* Inputs y select mejorados */
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="number"],
+input[type="date"],
+select,
+textarea {
+  transition: all 0.2s ease-in-out;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="number"]:focus,
+input[type="date"]:focus,
+select:focus,
+textarea:focus {
+  box-shadow: 0 0 0 3px rgba(21, 101, 192, 0.1);
+}
+
+/* Tablas mejoradas */
+table {
+  border-collapse: collapse;
+  width: 100%;
+}
+
+thead tr {
+  border-bottom: 2px solid #ddd;
+  background-color: #F5F5F5;
+}
+
+html.dark thead tr {
+  border-bottom-color: #2A2A3D;
+  background-color: #2A2A3D;
+}
+
+tbody tr {
+  transition: background-color 0.2s ease-in-out;
+}
+
+tbody tr:hover {
+  background-color: #f0f0f0;
+}
+
+html.dark tbody tr:hover {
+  background-color: #1E1E2F;
+}
+
+/* Badges y etiquetas */
+.badge {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  border-radius: 9999px;
+  font-size: 0.875rem;
+  font-weight: 600;
+  transition: all 0.2s ease-in-out;
+}
+
+.badge-primary {
+  background-color: rgba(21, 101, 192, 0.1);
+  color: #1565C0;
+}
+
+.badge-success {
+  background-color: rgba(46, 125, 50, 0.1);
+  color: #2E7D32;
+}
+
+.badge-warning {
+  background-color: rgba(237, 108, 2, 0.1);
+  color: #ED6C02;
+}
+
+.badge-danger {
+  background-color: rgba(211, 47, 47, 0.1);
+  color: #D32F2F;
+}
+
+/* Fondos suavizados */
+.bg-soft {
+  background-color: #F5F5F5;
+}
+
+html.dark .bg-soft {
+  background-color: #2A2A3D;
+}
+
+/* Sombras mejoradas */
+.shadow-soft {
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+}
+
+.shadow-strong {
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.shadow-xl {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+}
+
+/* Bordes redondeados */
+.rounded-lg {
+  border-radius: 0.5rem;
+}
+
+.rounded-xl {
+  border-radius: 1rem;
+}
